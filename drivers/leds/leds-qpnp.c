@@ -2782,7 +2782,7 @@ static ssize_t rgb_on_off_ms_show(struct device *dev,
 		struct device_attribute *attr, char *buf)
 {
 	struct led_classdev *led_cdev = dev_get_drvdata(dev);
-	struct qpnp_led_data *led =
+	struct qpnp_led_data *led = NULL;
 		container_of(led_cdev, struct qpnp_led_data, cdev);
 
 	return sprintf(buf, "%d %d\n",
